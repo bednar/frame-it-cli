@@ -3,7 +3,7 @@
 
 [![Docker Image Version](https://img.shields.io/docker/v/bednar/frame-it-cli)](https://hub.docker.com/r/bednar/frame-it-cli)
 
-This Docker image is designed to simplify the use of the FrameIt command in Fastlane, which automates the process of adding device frames to screenshots.
+This Docker image is designed to simplify the use of the FrameIt command in [Fastlane](https://fastlane.tools), which automates the process of adding device frames to screenshots.
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@ docker build -t bednar/frame-it-cli .
 
 ## Usage
 
-With the Docker image, you can execute various commands using Fastlane's FrameIt. Here are some example commands:
+With the Docker image, you can execute various commands using Fastlane's [FrameIt](https://docs.fastlane.tools/actions/frameit/#frameit). Here are some example commands:
 
 ### Adding Frames to Screenshots
 
@@ -63,4 +63,4 @@ This project is released under the MIT License. See the [`LICENSE`](https://gith
 
 ## Contact
 
-If you have any questions or need help, please open an issue in this GitHub repository for support and inquiries. Follow this link to create a new issue: [Open an Issue](https://github.com/bednar/frame-it-cli/issues/new)
+If you have any questions or need help, please open an issue in this GitHub repository for support and inquiries. Follow this link to create a new issue: [Open an Issue](https://github.com/bednar/frame-it-cli/issues/new).
