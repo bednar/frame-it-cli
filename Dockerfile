@@ -28,6 +28,10 @@ RUN bundle install
 #
 FROM ruby:3.3.1-slim as production
 
+# Install dependencies - imagemagick
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends imagemagick
+
 # Directories paths as environment variables
 ENV APP_HOME=/app
 ENV VENDOR_ENV=/app/vendor
@@ -54,8 +58,14 @@ COPY --from=builder --chown=cli:cli $APP_HOME/Gemfile.lock $APP_HOME/
 COPY --from=builder --chown=cli:cli $VENDOR_ENV $VENDOR_ENV
 COPY --from=builder --chown=cli:cli $APP_HOME/.bundle $APP_HOME/.bundle
 
+# Disable Fastlane telemetry
+ENV FASTLANE_OPT_OUT_USAGE=1
+
 # Install depencies
 RUN bundle install
+
+# Download devices frames
+RUN bundle exec fastlane frameit download_frames
 
 # Entrypoint
 ENTRYPOINT ["bundle", "exec", "fastlane"]

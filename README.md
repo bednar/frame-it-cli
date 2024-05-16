@@ -31,18 +31,10 @@ With the Docker image, you can execute various commands using Fastlane's [FrameI
 
 ### Adding Frames to Screenshots
 
-To add device frames to your screenshots, use the following command:
+To add device frames to your screenshots, use the following command in directory containing your screenshots:
 
 ```bash
-docker run -it --rm -v $(pwd):/app bednar/frame-it-cli frameit
-```
-
-### Specifying a Custom Configuration File
-
-If you have a custom FrameIt configuration file, you can specify it using the following command:
-
-```bash
-docker run -it --rm -v $(pwd):/app bednar/frame-it-cli frameit --config path/to/your/Framefile.json
+docker run -it --rm -v $(pwd):/app/Fastlane bednar/frame-it-cli frameit
 ```
 
 ### Specifying a Screenshots Directory
