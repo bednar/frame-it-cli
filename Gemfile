@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
 # Dependencies
-gem 'fastlane', '2.225.0'
+gem 'fastlane', '2.226.0'
