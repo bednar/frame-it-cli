@@ -1,7 +1,7 @@
 #
 # Builder image
 #
-FROM ruby:3.4.7 as builder
+FROM ruby:3.4.8 as builder
 
 # Directories paths as environment variables
 ENV APP_HOME=/app
@@ -26,7 +26,7 @@ RUN bundle install
 #
 # Production image
 #
-FROM ruby:3.4.7-slim as production
+FROM ruby:3.4.8-slim as production
 
 # Install dependencies - imagemagick
 RUN apt-get update && \
