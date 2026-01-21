@@ -6,4 +6,4 @@ gem "mutex_m"
 gem "ostruct"
 
 # Dependencies
-gem 'fastlane', '2.231.0'
+gem 'fastlane', '2.231.1'
