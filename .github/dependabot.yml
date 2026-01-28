@@ -1,14 +1,14 @@
-version: 2
-updates:
-  # Bundler (Ruby)
-  - package-ecosystem: "bundler"
-    directory: "/"
-    schedule:
-      interval: "daily"
+# version: 2
+# updates:
+#   # Bundler (Ruby)
+#   - package-ecosystem: "bundler"
+#     directory: "/"
+#     schedule:
+#       interval: "daily"
 
-  # Docker
-  - package-ecosystem: "docker"
-    directory: "/"
-    schedule:
-      interval: "daily"
+#   # Docker
+#   - package-ecosystem: "docker"
+#     directory: "/"
+#     schedule:
+#       interval: "daily"
 
